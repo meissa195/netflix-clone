@@ -1,0 +1,37 @@
+.row {
+  margin-left: 20px;
+  color: white;
+}
+.row-posters {
+  display: flex;
+  flex-direction: row;
+  /* look more into this */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  /* b/c we are transform */
+  padding: 20px;
+}
+.row-posters::-webkit-scrollbar {
+  /* do not display scrollbars but keep function of it */
+  display: none;
+}
+.row__poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px;
+  /* look more into transition/transform */
+  transition: transform 450ms;
+}
+.row__poster:hover {
+  transform: scale(1.08);
+}
+.row__posterLarge {
+  max-height: 250px;
+}
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
+.row__title {
+  margin-top: 10px;
+}
